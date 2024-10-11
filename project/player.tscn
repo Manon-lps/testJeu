@@ -21,10 +21,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_skh5w")
+"texture": ExtResource("2_4ela6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_4ela6")
+"texture": ExtResource("1_skh5w")
 }],
 "loop": true,
 "name": &"walk",
@@ -36,13 +36,16 @@ radius = 28.0
 height = 70.0
 
 [node name="Player" type="Area2D"]
+position = Vector2(-7, -8)
 script = ExtResource("1_1msj6")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+texture_filter = 1
+position = Vector2(-1, -1)
+scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_sk2ya")
-animation = &"walk"
+animation = &"up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_bghum")
